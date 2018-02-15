@@ -13,10 +13,10 @@ services:
       - "$PWD/video:/opt/selenoid/video"
     environment:
       - DOCKER_API_VERSION=1.35
-      #- OVERRIDE_VIDEO_OUTPUT_DIR=$PWD/video
+      - OVERRIDE_VIDEO_OUTPUT_DIR=$PWD/video
       - TIMEOUT="1s"
       - LIMIT=10
-    command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video", "-limit", "10", "-session-delete-timeout", "1s" ]
+    command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video", "-limit", "10", "-session-delete-timeout", "1s"]
 
   selenoid-ui:
     image: "aerokube/selenoid-ui"

@@ -19,6 +19,7 @@ Video recording:
   3. Add capability - "enableVideo = true" in your test configuraitions
    
 ```
+Use link: `http://localhost:4444/video/` to watch all recorded video-files. Click on video - to run.
 
  Java code example(using Selenide):
  ```
