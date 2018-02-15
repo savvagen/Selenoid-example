@@ -15,6 +15,7 @@ curl -s aerokube.com/cm/bash | bash && ./cm selenoid start --vnc
 Video recording:
   
   1. video will be recorded to the directoru /opt/selenoid/video (using flag -video-output-dir)
+     To apply this you need to comment "- OVERRIDE_VIDEO_OUTPUT_DIR" environment variable.
   2. Uncoment and use environmant variable - OVERRIDE_VIDEO_OUTPUT_DIR   - to recordvideo to specific folder.
   3. Add capability - "enableVideo = true" in your test configuraitions
    
