@@ -1,6 +1,6 @@
-# Selenoid running
+# How to run
 
-1. pull all selenoid, selenoid/ui, selenoid/video-recorder and vnc_browsers/(fierfox, chrome, opera) images
+1. pull  ` selenoid ` , ` selenoid_ui ` , ` selenoid/video-recorder ` and ` vnc_browsers/(fierfox, chrome, opera) ` images from docker-hub
 2. Run Selenoid containers with command: 
 ```
 docker-compose up -d
