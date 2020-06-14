@@ -1,26 +1,27 @@
-# How to run
+## Run with Docker
 
-1. Pull:  ` selenoid ` , ` selenoid_ui ` , ` selenoid/video-recorder ` and ` vnc_browsers/(fierfox, chrome, opera) ` images from docker-hub
-2. Run Selenoid containers with command: 
+1. Pull Docker images of: ` selenoid ` , ` selenoid_ui ` , ` selenoid/video-recorder ` and ` vnc_browsers/(fierfox, chrome, opera) ` images from docker-hub
+2. Run Selenoid and Selenoid-UI with docker-compose: 
 ```
 docker-compose up -d
 ```
-3. Run and download Configuration Manager using command:
+
+## Run with Configuration Manager
+1. Run and download Configuration Manager using command:
 ```
 curl -s aerokube.com/cm/bash | bash && ./cm selenoid start --vnc
 ```
-4. run your tests.
 
-```
-Video recording:
-  
-  1. video will be recorded to the directoru /opt/selenoid/video (using flag -video-output-dir)
-     To apply this you need to comment "- OVERRIDE_VIDEO_OUTPUT_DIR" environment variable.
-  2. Uncoment and use environmant variable - OVERRIDE_VIDEO_OUTPUT_DIR   - to recordvideo to specific folder.
-  3. Add capability - "enableVideo = true" in your test configuraitions
+## Video Recording
+
+```  
+  1. Add capability - "enableVideo = true" to enable video recording.
+  2. video will be recorded (according to command flag -video-output-dir) into: "/opt/selenoid/video" folder
+     To apply this you need to comment "- OVERRIDE_VIDEO_OUTPUT_DIR" environment variable in docker-compose file.
+  3. Use additional "OVERRIDE_VIDEO_OUTPUT_DIR" env. variable for video recording to specific folder.
    
 ```
-Use link: `http://localhost:4444/video/` to watch all recorded video-files. Click on video - to run.
+Use link: `http://localhost:4444/video/` to watch all recorded video-files.
 
  Java code example(using Selenide):
  ```
